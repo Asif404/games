@@ -1,118 +1,125 @@
-body, html {
-  font-family: "Vollkorn", serif;
-  font-weight: 400;
-  line-height: 1.3;
-  font-size: 16px;
-}
-
-.siteTitle {
-  display: block;
-  font-weight: 900;
-  font-size: 30px;
-  margin: 20px 0;
-}
-@media (min-width: 768px) {
-  .siteTitle {
-    font-size: 60px;
-  }
-}
-
-header,
-main,
-footer {
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.card {
-  height: 400px;
-  position: relative;
-  padding: 20px;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  display: flex;
-  align-items: flex-end;
-  text-decoration: none;
-  border: 4px solid #b0215e;
-  margin-bottom: 20px;
-  background-image: url("assets/2048.jpg");
-  background-size: cover;
-}
-@media (min-width: 768px) {
-  .card {
-    height: 500px;
-  }
+  font-family: "Poppins", sans-serif;
 }
 
-.inner {
-  height: 50%;
+body {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: white;
-  box-sizing: border-box;
-  padding: 40px;
-}
-@media (min-width: 768px) {
-  .inner {
-    width: 50%;
-    height: 100%;
-  }
+  flex-wrap: wrap;
+  min-height: 100vh;
+  background: #232427;
 }
 
-.title {
-  font-size: 24px;
-  color: black;
-  text-align: center;
-  font-weight: 700;
-  color: #181818;
-  text-shadow: 0px 2px 2px #a6f8d5;
-  position: relative;
-  margin: 0 0 20px 0;
-}
-@media (min-width: 768px) {
-  .title {
-    font-size: 30px;
-  }
-}
-
-.subtitle {
-  color: #b0215e;
-  text-align: center;
-}
-
-.card2 {
-  background-image: url("assets/runner.jpeg");
-}
-
-.card3 {
-  background-image: url("assets/Hexic-2048.jpg");
-}
-.card4 {
-  background-image: url("assets/flappy.jpg");
-}
-
-footer {
+body .container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
   margin: 40px 0;
 }
 
-.footerLink {
-  margin-right: 12px;
-  color: #181818;
-  text-decoration: none;
+body .container .card {
   position: relative;
+  min-width: 320px;
+  height: 440px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin: 30px;
+  transition: 0.5s;
 }
-.footerLink:after {
+
+body .container .card:nth-child(1) .box .content a {
+  background: #2196f3;
+}
+
+body .container .card:nth-child(2) .box .content a {
+  background: #e91e63;
+}
+
+body .container .card:nth-child(3) .box .content a {
+  background: #23c186;
+}
+
+body .container .card .box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: #2a2b2f;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+body .container .card .box:hover {
+  transform: translateY(-50px);
+}
+
+body .container .card .box:before {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 4px;
-  background-color: rgba(176, 33, 94, 0.3);
+  top: 0;
   left: 0;
-  bottom: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
 }
-.footerLink:last-child {
-  margin-right: 0;
+
+body .container .card .box .content {
+  padding: 20px;
+  text-align: center;
+}
+
+body .container .card .box .content h2 {
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+body .container .card .box .content h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  z-index: 1;
+  transition: 0.5s;
+  margin-bottom: 15px;
+}
+
+body .container .card .box .content p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+body .container .card .box .content a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  background: black;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  margin-top: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+body .container .card .box .content a:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  background: #fff;
+  color: #000;
 }
