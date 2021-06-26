@@ -10,4 +10,6 @@ orginal: [zouariste](https://github.com/zouariste/corona-runner)
 
 ## 2048-hex
 Orginal: [Baiqiang](https://github.com/Baiqiang/2048-hexagon)
- 
+
+## Stack Up
+Orginal: [Siddhant-K-code](https://github.com/Siddhant-K-code/Block-Tower)
